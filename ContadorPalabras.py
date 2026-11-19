@@ -29,8 +29,17 @@ class ContadorPalabras(QtWidgets.QMainWindow):
         totalCaracteres
         self.tvCaracteres.setText(f"Caracteres: {totalCaracteres}")
         
+        #aqui abajo logica 
+        if cantidadPalabras >= 20:
+            self.tvPalabras.setSytyleSheet("color: #ff756b")
+        else:
+            self.tvPalabras.setSytyleSheet("color: #000000")
         
-app = QtWidgets.QApplication(sys.argv)
+        
+        if totalCaracteres >= 120:
+            self.tvCaracteres.setSytyleSheet("color: #ff756b")
+        else:
+            self.tvCaracteres.setSytyleSheet("color: #000000")
 ventana = ContadorPalabras()
 ventana.show()
 sys.exit(app.exec())
